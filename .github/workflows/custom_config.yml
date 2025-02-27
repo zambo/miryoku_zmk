@@ -1,0 +1,15 @@
+# Copyright 2022 Manna Harbour
+# https://github.com/manna-harbour/miryoku
+
+name: "00 zmb corne colemakdhk"
+on: workflow_dispatch
+jobs:
+  build:
+    uses: ./.github/workflows/main.yml
+    secrets: inherit
+    with:
+      board: '["nice_nano_v2"]'
+      shield: '["corne_left nice_view_adapter nice_view", "corne_right nice_view_adapter nice_view"]'
+      custom_config: '["#define MIRYOKU_KLUDGE_MOUSEKEYSPR", "#define MIRYOKU_CLIPBOARD=MAC"]'
+      alphas: '["colemakdhk"]'
+      modules: '["a741725193/zmk-new_corne/main"]'
