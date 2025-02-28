@@ -11,3 +11,5 @@ jobs:
       board: '["eyelash_corne_left", "eyelash_corne_right"]'
       shield: '["nice_view"]'
       modules: '["zambo/zmk-corne/main"]'
+      clipboard: '["mac"]'
+      alphas: '["default"]'
