@@ -10,4 +10,4 @@ jobs:
     with:
       board: '["eyelash_corne_left", "eyelash_corne_right"]'
       shield: '["nice_view"]'
-      modules: '["zambo/zmk-corne/main/config"]'
+      modules: '["zambo/zmk-corne/main"]'
