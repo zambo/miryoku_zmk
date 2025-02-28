@@ -24,6 +24,7 @@ jobs:
         "clog_left","clog_right",
         "contra",
         "corne_left","corne_right",
+        "eyelash_corne_left","eyelash_corne_right",
         "cradio_left","cradio_right",
         "crbn",
         "dactyl_manuform_4x5_left","dactyl_manuform_4x5_right",
