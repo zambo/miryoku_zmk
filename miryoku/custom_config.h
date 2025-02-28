@@ -1,6 +1,9 @@
 // Copyright 2021 Manna Harbour
 // https://github.com/manna-harbour/miryoku
 
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
+
 #define CONFIG_ZMK_IDLE_SLEEP_TIMEOUT 3600000
 #define CONFIG_ZMK_SLEEP
 #define CONFIG_WS2812_STRIP
@@ -14,4 +17,3 @@
 #define CONFIG_ZMK_MOUSE
 #define CONFIG_ZMK_BACKLIGHT
 #define CONFIG_ZMK_BACKLIGHT_BRT_START 100
-
