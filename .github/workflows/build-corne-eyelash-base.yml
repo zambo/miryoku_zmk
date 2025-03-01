@@ -11,6 +11,6 @@ jobs:
       shield: '["nice_view"]'
       board: '["eyelash_corne_left", "eyelash_corne_right"]'
       kconfig: '["CONFIG_ZMK_DISPLAY=y"]'
-      # branches: '["a741725193/zmk-new_corne/main"]'
+      modules: '["a741725193/zmk-new_corne/main"]'
       clipboard: '["mac"]'
       alphas: '["default"]'
