@@ -1,15 +1,16 @@
 # Copyright 2022 Manna Harbour
 # https://github.com/manna-harbour/miryoku
 
-name: "Corne Eyelash"
+name: "Corne Eyelash - Studio"
 on: workflow_dispatch
 jobs:
   build:
     uses: ./.github/workflows/main.yml
     secrets: inherit
     with:
-      board: '["eyelash_corne_left", "eyelash_corne_left studio-rpc-usb-uart", "eyelash_corne_left studio-rpc-usb-uart" "eyelash_corne_right"]'
-      shield: '["nice_view", "settings_reset"]'
+      board: '["eyelash_corne_left", "eyelash_corne_left"]'
+      shield: '["nice_view"]'
+      kconfig: '["DCONFIG_ZMK_STUDIO=y\nCONFIG_ZMK_STUDIO_LOCKING=n"]'
       modules: '["a741725193/zmk-new_corne/main"]'
       clipboard: '["mac"]'
       alphas: '["default"]'

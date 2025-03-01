@@ -1,0 +1,16 @@
+# Copyright 2022 Manna Harbour
+# https://github.com/manna-harbour/miryoku
+
+name: "Corne Eyelash"
+on: workflow_dispatch
+jobs:
+  build:
+    uses: ./.github/workflows/main.yml
+    secrets: inherit
+    with:
+      board: '["eyelash_corne_left", "eyelash_corne_left"]'
+      shield: '["nice_view"]'
+      kconfig: '["CONFIG_ZMK_DISPLAY=y"]'
+      modules: '["a741725193/zmk-new_corne/main"]'
+      clipboard: '["mac"]'
+      alphas: '["default"]'
