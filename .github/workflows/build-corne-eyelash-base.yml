@@ -9,7 +9,7 @@ jobs:
     secrets: inherit
     with:
       shield: '["nice_view"]'
-      board: '["eyelash_corne_left", "eyelash_corne_right"]'
+      board: '["eyelash_corne_left nice_view_adapter nice_view", "eyelash_corne_right nice_view_adapter nice_view"]'
       kconfig: '["CONFIG_ZMK_DISPLAY=y"]'
       modules: '["a741725193/zmk-new_corne/main"]'
       clipboard: '["mac"]'
