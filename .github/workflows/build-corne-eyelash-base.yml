@@ -8,7 +8,7 @@ jobs:
     uses: ./.github/workflows/main.yml
     secrets: inherit
     with:
-      shield: "nice_view"
+      shield: '["nice_view"]'
       board: '["eyelash_corne_left", "eyelash_corne_right"]'
       modules: '["a741725193/zmk-new_corne/main"]'
       clipboard: '["mac"]'
