@@ -9,7 +9,7 @@ jobs:
     secrets: inherit
     with:
       shield: '["nice_view"]'
-      board: '["eyelash_corne_left", "eyelash_corne_right"]'
+      board: '["eyelash_corne_left nice_view_left", "eyelash_corne_right nice_view_right"]'
       modules: '["a741725193/zmk-new_corne/main"]'
       clipboard: '["mac"]'
       alphas: '["default"]'
