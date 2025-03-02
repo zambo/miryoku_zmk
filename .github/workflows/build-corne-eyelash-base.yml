@@ -8,8 +8,8 @@ jobs:
     uses: ./.github/workflows/main.yml
     secrets: inherit
     with:
-      modules: '["a741725193/zmk-new_corne/main"]'
       board: '["eyelash_corne_left", "eyelash_corne_left"]'
       shield: '["nice_view"]'
+      modules: '["a741725193/zmk-new_corne/main"]'
       clipboard: '["mac"]'
       alphas: '["default"]'
