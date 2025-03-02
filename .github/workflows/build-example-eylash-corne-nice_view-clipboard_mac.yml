@@ -1,16 +1,16 @@
 # Copyright 2022 Manna Harbour
 # https://github.com/manna-harbour/miryoku
 
-name: "Build Example eyelash_corne nice_view display mousekeyspr"
+name: "Build Example eyelash_corne clipboard_mac nice_view display"
 on: workflow_dispatch
 jobs:
   build:
     uses: ./.github/workflows/main.yml
     secrets: inherit
     with:
-      shield: '["nice_view"]'
       board: '["eyelash_corne_left", "eyelash_corne_right"]'
+      shield: '["nice_view"]'
       clipboard: '["mac"]'
       alphas: '["default"]'
-      custom_config: '["#define MIRYOKU_KLUDGE_TAPDELAY\n#define MIRYOKU_KLUDGE_MOUSEKEYSPR\n#define MIRYOKU_CLIPBOARD_MAC"]'
+      custom_config: '["#define MIRYOKU_CLIPBOARD_MAC"]'
       modules: '["a741725193/zmk-new_corne/main"]'
