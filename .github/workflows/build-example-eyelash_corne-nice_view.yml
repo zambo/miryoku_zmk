@@ -10,5 +10,4 @@ jobs:
     with:
       board: '["eyelash_corne_left", "eyelash_corne_right"]'
       shield: '["nice_view"]'
-      custom_config: '["#define MIRYOKU_CLIPBOARD_MAC"]'
       modules: '["a741725193/zmk-new_corne/main"]'
