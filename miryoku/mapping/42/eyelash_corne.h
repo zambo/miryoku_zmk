@@ -42,7 +42,7 @@ page_encoder: page_encoder { \
 XXX  K00  K01  K02  K03  K04             U_MS_U          K05  K06  K07  K08  K09  XXX \
 XXX  K10  K11  K12  K13  K14     U_MS_L  U_BTN1  U_MS_R  K15  K16  K17  K18  K19  XXX \
                K32  K33  K34  XXX        U_MS_D          K35  K36  K37                \
-               SENSOR_BINDING_ASSIGNMENT
+               (SENSOR_BINDING_ASSIGNMENT)
 
 #endif
 
