@@ -1,7 +1,7 @@
 # Copyright 2022 Manna Harbour
 # https://github.com/manna-harbour/miryoku
 
-name: "Build Example eyelash_corne nice_view display"
+name: "Build Example eyelash_corne nice_view display custom config"
 on: workflow_dispatch
 jobs:
   build:
