@@ -3,6 +3,7 @@
 
 #include <behaviors.dtsi>
 #include <behaviors/mouse_key_press.dtsi>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
 #if defined (MIRYOKU_KLUDGE_MOUSEKEYSPR)
 #include <behaviors/mouse_move.dtsi>
 #include <behaviors/mouse_scroll.dtsi>
