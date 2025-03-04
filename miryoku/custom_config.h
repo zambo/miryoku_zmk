@@ -25,27 +25,6 @@
 #define CML &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 #define CSL &msc_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
-#define CUSTOM_ENCODERS \
-{ \
-  scroll_encoder: scroll_encoder { \
-    compatible = "zmk,behavior-sensor-rotate"; \
-    #binding-cells = <2>; \
-    #sensor-binding-cells = <0>;  \
-    bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>; \
-    tap-ms = <100>; \
-  }; \
-  volume_encoder: volume_encoder { \
-    compatible = "zmk,behavior-sensor-rotate"; \
-    #sensor-binding-cells = <0>;  \
-    bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>; \
-  }; \
-  code_nav: code_nav { \
-    compatible = "zmk,behavior-sensor-rotate"; \
-    #sensor-binding-cells = <0>;  \
-    bindings = <&inc_dec_kp U_UND U_RDO>; \
-  }; \
-};
-
 #define MIRYOKU_LAYOUTMAPPING_EYELASH_CORNE( \
      K00, K01, K02, K03, K04,                     K05, K06, K07, K08, K09, \
      K10, K11, K12, K13, K14,                     K15, K16, K17, K18, K19, \
@@ -62,8 +41,8 @@ MIRYOKU_X(BASE,   "Base",       sensor-bindings = <&volume_encoder>; ) \
 MIRYOKU_X(EXTRA,  "Extra",      sensor-bindings = <&scroll_encoder>; ) \
 MIRYOKU_X(TAP,    "Tap",        sensor-bindings = <&scroll_encoder>; ) \
 MIRYOKU_X(BUTTON, "Button",     sensor-bindings = <&scroll_encoder>; ) \
-MIRYOKU_X(NAV,    "Nav",        sensor-bindings = <&scroll_encoder>; ) \
-MIRYOKU_X(MOUSE,  "Mouse",      sensor-bindings = <&code_nav>; ) \
+MIRYOKU_X(NAV,    "Nav",        sensor-bindings = <&left_right_encoder>; ) \
+MIRYOKU_X(MOUSE,  "Mouse",      sensor-bindings = <&undo_redo_encoder>; ) \
 MIRYOKU_X(MEDIA,  "Media",      sensor-bindings = <&volume_encoder>; ) \
 MIRYOKU_X(NUM,    "Num",        sensor-bindings = <&scroll_encoder>; ) \
 MIRYOKU_X(SYM,    "Sym",        sensor-bindings = <&scroll_encoder>; ) \
