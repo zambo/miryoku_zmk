@@ -37,7 +37,7 @@
 #define CML &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 #define CSL &msc_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
-#define MIRYOKU_LAYOUTMAPPING_CUSTOM_CORNE( \
+#define MIRYOKU_LAYOUTMAPPING_EYELASH_CORNE( \
      K00, K01, K02, K03, K04,                     K05, K06, K07, K08, K09, \
      K10, K11, K12, K13, K14,                     K15, K16, K17, K18, K19, \
      K20, K21, K22, K23, K24,                     K25, K26, K27, K28, K29, \
@@ -55,7 +55,7 @@ U_NA,              &kp RALT,          &u_to_U_SYM,       &u_to_U_MOUSE,     U_NA
 U_NP,              U_NP,              U_NA,              U_NA,              U_NA,                                                   U_BTN2,            U_BTN1,            U_BTN3,            U_NP,              U_NP
 
 
-#define MCUSTOMMAPPING MIRYOKU_LAYOUTMAPPING_CUSTOM_CORNE
+#define MCUSTOMMAPPING MIRYOKU_LAYOUTMAPPING_EYELASH_CORNE
 #define MCUSTOMMAPPING MIRYOKU_LAYER_MOUSE
 
 #define MIRYOKU_LAYER_LIST \
