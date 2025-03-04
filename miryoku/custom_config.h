@@ -62,9 +62,6 @@ XXX  K10  K11  K12  K13  K14       CLE  CEN  CRI  K15  K16  K17  K18  K19  XXX \
 XXX  K20  K21  K22  K23  K24  CMU       CDN       K25  K26  K27  K28  K29  XXX \
                K32  K33  K34                      K35  K36  K37
 
-#define MIRYOKU_MAPPING MIRYOKU_LAYOUTMAPPING_EYELASH_CORNE
-
-
 #define MIRYOKU_LAYER_LIST \
 MIRYOKU_X(BASE,   "Base",       sensor-bindings = <&volume_encoder>; ) \
 MIRYOKU_X(EXTRA,  "Extra",      sensor-bindings = <&scroll_encoder>; ) \
@@ -88,5 +85,4 @@ MIRYOKU_X(FUN,    "Fun",        sensor-bindings = <&scroll_encoder>; )
 #define U_SYM    8
 #define U_FUN    9
 
-
-// MIRYOKU_X(BASE,   "Base",   sensor-bindings = < &inc_dec_kp DOWN UP &inc_dec_kp RIGHT LEFT> ;) \
+#define MIRYOKU_MAPPING MIRYOKU_LAYOUTMAPPING_EYELASH_CORNE
