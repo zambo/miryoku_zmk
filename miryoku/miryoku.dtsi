@@ -33,37 +33,33 @@
 
 / {
 	rgb_encoder: rgb_encoder {
-		compatible = "zmk,behavior-sensor-rotate";
-		#sensor-binding-cells = <0>;
-		bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
+		compatible = "zmk,behavior-sensor-rotate"; \
+		#sensor-binding-cells = <0>; \
+		bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>; \
 	};
 
 	scroll_encoder: scroll_encoder {
-		compatible = "zmk,behavior-sensor-rotate";
-		#sensor-binding-cells = <0>;
-		bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-		tap-ms = <30>;
+		compatible = "zmk,behavior-sensor-rotate"; \
+		#sensor-binding-cells = <0>; \
+		bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>; \
 	};
 
 	undo_redo_encoder: undo_redo_encoder {
-		compatible = "zmk,behavior-sensor-rotate";
-		#sensor-binding-cells = <0>;
-		bindings = <&inc_dec_kp K_UNDO K_AGAIN>; \
-		tap-ms = <30>;
+		compatible = "zmk,behavior-sensor-rotate"; \
+		#sensor-binding-cells = <0>; \
+		bindings = <&kp K_UNDO>, <&kp K_AGAIN>; \
 	};
 
 	volume_encoder: volume_encoder {
-		compatible = "zmk,behavior-sensor-rotate";
-		#sensor-binding-cells = <0>;
-		bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOL_UP>; \
-		tap-ms = <30>;
+		compatible = "zmk,behavior-sensor-rotate"; \
+		#sensor-binding-cells = <0>; \
+		bindings = <&kp C_VOLUME_DOWN>, <&kp C_VOL_UP>; \
 	};
 
 	left_right_encoder: left_right_encoder {
 		compatible = "zmk,behavior-sensor-rotate";
 		#sensor-binding-cells = <0>;
 		bindings = <&inc_dec_kp LEFT RIGHT>; \
-		tap-ms = <30>;
 	};
 
 	keymap {
