@@ -26,7 +26,7 @@
 #define CSL &msc_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
 #define CUSTOM_ENCODERS \
-/ { \
+{ \
   scroll_encoder: scroll_encoder { \
     compatible = "zmk,behavior-sensor-rotate"; \
     #binding-cells = <2>; \
@@ -46,7 +46,7 @@
   }; \
 };
 
-#define SCROLL_ENCODER {sensor-bindings = <&scroll_encoder>}
+#define SCROLL_ENCODER {sensor-bindings = <&scroll_encoder>;}
 
 #define MIRYOKU_LAYOUTMAPPING_EYELASH_CORNE( \
      K00, K01, K02, K03, K04,                     K05, K06, K07, K08, K09, \
