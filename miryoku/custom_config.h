@@ -34,11 +34,6 @@
     bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>; \
     tap-ms = <100>; \
   }; \
-  rgb_encoder: rgb_encoder { \
-    compatible = "zmk,behavior-sensor-rotate"; \
-    #sensor-binding-cells = <0>;  \
-    bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>; \
-  }; \
   volume_encoder: volume_encoder { \
     compatible = "zmk,behavior-sensor-rotate"; \
     #sensor-binding-cells = <0>;  \
@@ -69,7 +64,7 @@ MIRYOKU_X(TAP,    "Tap",        sensor-bindings = <&scroll_encoder>; ) \
 MIRYOKU_X(BUTTON, "Button",     sensor-bindings = <&scroll_encoder>; ) \
 MIRYOKU_X(NAV,    "Nav",        sensor-bindings = <&scroll_encoder>; ) \
 MIRYOKU_X(MOUSE,  "Mouse",      sensor-bindings = <&code_nav>; ) \
-MIRYOKU_X(MEDIA,  "Media",      sensor-bindings = <&rgb_encoder>; ) \
+MIRYOKU_X(MEDIA,  "Media",      sensor-bindings = <&volume_encoder>; ) \
 MIRYOKU_X(NUM,    "Num",        sensor-bindings = <&scroll_encoder>; ) \
 MIRYOKU_X(SYM,    "Sym",        sensor-bindings = <&scroll_encoder>; ) \
 MIRYOKU_X(FUN,    "Fun",        sensor-bindings = <&scroll_encoder>; )
