@@ -25,7 +25,6 @@
 			display-name = STRING; \
 			bindings = < U_MACRO_VA_ARGS(MIRYOKU_LAYERMAPPING_##LAYER, MIRYOKU_LAYER_##LAYER) >; \
 			EXTRA \
-			
 		};
 		MIRYOKU_LAYER_LIST
 		#undef MIRYOKU_X

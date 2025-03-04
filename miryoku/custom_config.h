@@ -66,16 +66,16 @@ XXX  K20  K21  K22  K23  K24  CMU       CDN       K25  K26  K27  K28  K29  XXX \
 
 
 #define MIRYOKU_LAYER_LIST \
-MIRYOKU_X(BASE,   "Base",  sensor-bindings = <&volume_encoder>; ) \
-MIRYOKU_X(EXTRA,  "Extra",  sensor-bindings = <&scroll_encoder>; ) \
-MIRYOKU_X(TAP,    "Tap",  sensor-bindings = <&scroll_encoder>; ) \
-MIRYOKU_X(BUTTON, "Button",  sensor-bindings = <&scroll_encoder>; ) \
-MIRYOKU_X(NAV,    "Nav",  sensor-bindings = <&scroll_encoder>; ) \
-MIRYOKU_X(MOUSE,  "Mouse",  sensor-bindings = <&code_nav>; ) \
-MIRYOKU_X(MEDIA,  "Media",  sensor-bindings = <&rgb_encoder>; ) \
-MIRYOKU_X(NUM,    "Num",  sensor-bindings = <&scroll_encoder>; ) \
-MIRYOKU_X(SYM,    "Sym",  sensor-bindings = <&scroll_encoder>; ) \
-MIRYOKU_X(FUN,    "Fun",  sensor-bindings = <&scroll_encoder>; )
+MIRYOKU_X(BASE,   "Base",       sensor-bindings = <&volume_encoder>; ) \
+MIRYOKU_X(EXTRA,  "Extra",      sensor-bindings = <&scroll_encoder>; ) \
+MIRYOKU_X(TAP,    "Tap",        sensor-bindings = <&scroll_encoder>; ) \
+MIRYOKU_X(BUTTON, "Button",     sensor-bindings = <&scroll_encoder>; ) \
+MIRYOKU_X(NAV,    "Nav",        sensor-bindings = <&scroll_encoder>; ) \
+MIRYOKU_X(MOUSE,  "Mouse",      sensor-bindings = <&code_nav>; ) \
+MIRYOKU_X(MEDIA,  "Media",      sensor-bindings = <&rgb_encoder>; ) \
+MIRYOKU_X(NUM,    "Num",        sensor-bindings = <&scroll_encoder>; ) \
+MIRYOKU_X(SYM,    "Sym",        sensor-bindings = <&scroll_encoder>; ) \
+MIRYOKU_X(FUN,    "Fun",        sensor-bindings = <&scroll_encoder>; )
 
 #define U_BASE   0
 #define U_EXTRA  1
