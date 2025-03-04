@@ -3,17 +3,17 @@
 
 #define MIRYOKU_DOUBLE_TAP_GUARD(NAME, BINDING) \
 / { \
-  behaviors { \
-    NAME: NAME { \
-      compatible = "zmk,behavior-tap-dance"; \
-      #binding-cells = <0>; \
-      tapping-term-ms = <U_TAPPING_TERM>; \
-      bindings = <&none>, <BINDING>; \
-    }; \
-  }; \
+	behaviors { \
+		NAME: NAME { \
+			compatible = "zmk,behavior-tap-dance"; \
+			#binding-cells = <0>; \
+			tapping-term-ms = <U_TAPPING_TERM>; \
+			bindings = <&none>, <BINDING>; \
+		}; \
+	}; \
 };
 
-#define MIRYOKU_X(LAYER, STRING) \
+#define MIRYOKU_X(LAYER, STRING, EXTRA) \
 MIRYOKU_DOUBLE_TAP_GUARD(u_to_U_##LAYER, &to U_##LAYER)
 MIRYOKU_LAYER_LIST
 #undef MIRYOKU_X
