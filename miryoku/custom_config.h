@@ -1,6 +1,8 @@
 // Copyright 2022 Manna Harbour
 // https://github.com/manna-harbour/miryoku
 
+#include <zephyr/dt-bindings/input/input-event-codes.h> // KEY_A, KEY_B, ...
+
 #if !defined (MIRYOKU_LAYOUTMAPPING_EYELASH_CORNE)
 
 #define XXX &none
@@ -14,6 +16,47 @@
 #define CUP &kp UP
 #define CDN &kp DOWN
 
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1250
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 100
+
+#define U_MOUSE_MOVE_EXPONENT 1
+#define U_MOUSE_MOVE_TIME 1500
+#define U_MOUSE_MOVE_DELAY 0
+#define U_MOUSE_SCROLL_EXPONENT 1
+#define U_MOUSE_SCROLL_TIME 5000
+#define U_MOUSE_SCROLL_DELAY 0
+
+#define CML &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
+#define CSL &msc_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
+
+#define CUSTOM_SCROLL_ENCODER \
+/ { \
+  scroll_encoder: scroll_encoder { \
+    compatible = "zmk,behavior-sensor-rotate"; \
+    #binding-cells = <2>; \
+    #sensor-binding-cells = <0>;  \
+    bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>; \
+    tap-ms = <100>; \
+  }; \
+};
+
+#define CUSTOM_RGB_ENCODER \
+/ { \
+  rgb_encoder: rgb_encoder { \
+    compatible = "zmk,behavior-sensor-rotate"; \
+    #sensor-binding-cells = <0>;  \
+    bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>; \
+  }; \
+};
+
+#define CUSTOM_VOLUME_ENCODER \
+/ { \
+  scroll_encoder: scroll_encoder { \
+    compatible = "zmk,behavior-sensor-rotate"; \
+    #sensor-binding-cells = <0>;  \
+    bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>; \
+  }; \
+};
 
 #define MIRYOKU_LAYOUTMAPPING_EYELASH_CORNE( \
      K00, K01, K02, K03, K04,                     K05, K06, K07, K08, K09, \
@@ -24,7 +67,9 @@
 XXX  K00  K01  K02  K03  K04            CUP       K05  K06  K07  K08  K09  XXX \
 XXX  K10  K11  K12  K13  K14       CLE  CEN  CRI  K15  K16  K17  K18  K19  XXX \
 XXX  K20  K21  K22  K23  K24  CMU       CDN       K25  K26  K27  K28  K29  XXX \
-      CVD CVU  K32  K33  K34                      K35  K36  K37
+               K32  K33  K34                      K35  K36  K37 \
+               scroll_encoder: <&scroll_encoder>
+
 
 
 #endif
