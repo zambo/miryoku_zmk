@@ -55,8 +55,8 @@ MIRYOKU_X(BUTTON, "Button",     sensor-bindings = <&rgb_encoder>; ) \
 MIRYOKU_X(NAV,    "Nav",        sensor-bindings = <&volume_encoder>; ) \
 MIRYOKU_X(MOUSE,  "Mouse",      sensor-bindings = <&scroll_encoder>; ) \
 MIRYOKU_X(MEDIA,  "Media",      sensor-bindings = <&volume_encoder>; ) \
-MIRYOKU_X(NUM,    "Num",        sensor-bindings = <&undo_redo_encoder>; ) \
-MIRYOKU_X(SYM,    "Sym",        sensor-bindings = <&left_right_encoder>; ) \
+MIRYOKU_X(NUM,    "Num",        sensor-bindings = <&left_right_encoder>; ) \
+MIRYOKU_X(SYM,    "Sym",        sensor-bindings = <&undo_redo_encoder>; ) \
 MIRYOKU_X(FUN,    "Fun",        sensor-bindings = <&up_down_encoder>; )
 
 #define U_BASE   0
