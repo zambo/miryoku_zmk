@@ -57,14 +57,14 @@
 	};
 
 	left_right_encoder: left_right_encoder {
-		compatible = "zmk,behavior-sensor-rotate";
-		#sensor-binding-cells = <0>;
+		compatible = "zmk,behavior-sensor-rotate"; \
+		#sensor-binding-cells = <0>; \
 		bindings = <&kp LEFT>, <&kp RIGHT>; \
 	};
 
   up_down_encoder: up_down_encoder {
 		compatible = "zmk,behavior-sensor-rotate";
-		#sensor-binding-cells = <0>;
+		#sensor-binding-cells = <0>; \
 		bindings = <&kp UP>, <&kp DOWN>; \
 	};
 
