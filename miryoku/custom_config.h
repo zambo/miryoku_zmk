@@ -5,15 +5,6 @@
 
 // #define STD &studio_unlock
 
-#define CVU &kp C_VOL_UP
-#define CVD &kp C_VOLUME_DOWN
-#define CMU &kp C_MUTE
-#define CEN &kp KP_ENTER
-#define CLE &kp LEFT
-#define CRI &kp RIGHT
-#define CUP &kp UP
-#define CDN &kp DOWN
-
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1250
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 100
 
@@ -24,6 +15,35 @@
 #define U_MOUSE_SCROLL_TIME 5000
 #define U_MOUSE_SCROLL_DELAY 0
 
+// Media keys
+#define U_VUP       &kp C_VOL_UP
+#define U_VDN       &kp C_VOLUME_DOWN
+#define U_VMT       &kp C_MUTE
+
+// Direction keys
+#define U_DR_E      &kp ENTER
+#define U_DR_D      &kp DOWN
+#define U_DR_L      &kp LEFT
+#define U_DR_R      &kp RIGHT
+#define U_DR_U      &kp UP
+
+// MOD keys
+#define U_ESC         &kp ESC
+#define U_RET         &kp RET
+#define U_BPC         &kp BSPC
+#define U_DEL         &kp DEL
+#define U_SPC         &kp SPACE
+#define U_TAB         &kp TAB
+#define U_LSH         &kp LSHFT
+#define U_LCT         &kp LCTRL
+#define U_LAL         &kp LALT
+#define U_LCM         &kp LGUI
+
+// Layer switching keys
+#define U_LG         &to U_EXTRA
+#define U_LB         &to U_BASE
+
+// Mouse keys
 #define U_BTN1 &mkp MB1
 #define U_BTN2 &mkp MB2
 #define U_BTN3 &mkp MB3
@@ -37,15 +57,27 @@
 #define U_WH_U &msc SCRL_UP
 
 #define MIRYOKU_LAYOUTMAPPING_EYELASH_CORNE( \
-     K00, K01, K02, K03, K04,                     K05, K06, K07, K08, K09, \
-     K10, K11, K12, K13, K14,                     K15, K16, K17, K18, K19, \
-     K20, K21, K22, K23, K24,                     K25, K26, K27, K28, K29, \
-     N30, N31, K32, K33, K34,                     K35, K36, K37, N38, N39 \
+      K00, K01, K02, K03, K04,                     K05, K06, K07, K08, K09, \
+      K10, K11, K12, K13, K14,                     K15, K16, K17, K18, K19, \
+      K20, K21, K22, K23, K24,                     K25, K26, K27, K28, K29, \
+      N30, N31, K32, K33, K34,                     K35, K36, K37, N38, N39 \
 ) \
-XXX  K00  K01  K02  K03  K04            U_MS_U          K05  K06  K07  K08  K09  XXX \
-XXX  K10  K11  K12  K13  K14    U_MS_L  U_BTN1  U_MS_R  K15  K16  K17  K18  K19  XXX \
-XXX  K20  K21  K22  K23  K24  CMU       U_MS_D          K25  K26  K27  K28  K29  XXX \
-               K32  K33  K34                            K35  K36  K37
+XXX   K00  K01  K02  K03  K04            U_MS_U          K05  K06  K07  K08  K09  XXX \
+XXX   K10  K11  K12  K13  K14    U_MS_L  U_BTN1  U_MS_R  K15  K16  K17  K18  K19  XXX \
+XXX   K20  K21  K22  K23  K24  U_VMT     U_MS_D          K25  K26  K27  K28  K29  XXX \
+                K32  K33  K34                            K35  K36  K37
+
+#define MIRYOKU_LAYERMAPPING_BASE( \
+      K00, K01, K02, K03, K04,                            K05, K06, K07, K08, K09, \
+      K10, K11, K12, K13, K14,                            K15, K16, K17, K18, K19, \
+      K20, K21, K22, K23, K24,                            K25, K26, K27, K28, K29, \
+      N30, N31, K32, K33, K34,                            K35, K36, K37, N38, N39 \
+) \
+U_ESC   K00  K01  K02  K03  K04            U_DR_U          K05  K06  K07  K08  K09  XXX \
+U_TAB   K10  K11  K12  K13  K14    U_DR_L  U_DR_E  U_DR_R  K15  K16  K17  K18  K19  U_LG \
+U_LSH   K20  K21  K22  K23  K24  U_VMT     U_DR_D          K25  K26  K27  K28  K29  U_LB \
+                  K32  K33  K34                            K35  K36  K37
+
 
 #define MIRYOKU_LAYER_LIST \
 MIRYOKU_X(BASE,   "Base",       sensor-bindings = <&volume_encoder>; ) \
