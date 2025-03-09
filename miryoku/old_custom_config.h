@@ -1,8 +1,7 @@
 // Copyright 2022 Manna Harbour
 // https://github.com/manna-harbour/miryoku
 
-
-// #define STD &studio_unlock
+#define XXX &none
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1250
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 100
@@ -13,8 +12,6 @@
 #define U_MOUSE_SCROLL_EXPONENT 1
 #define U_MOUSE_SCROLL_TIME 5000
 #define U_MOUSE_SCROLL_DELAY 0
-
-#define XXX &none
 
 #define U_BTN1 &mkp MB1
 #define U_BTN2 &mkp MB2
@@ -48,8 +45,8 @@
 #define U_LAL         &kp LALT
 #define U_LCM         &kp LGUI
 
-#define TLG         &to U_EXTRA
-#define TLB         &to U_BASE
+#define U_LG         &to U_EXTRA
+#define U_LB         &to U_BASE
 
 #define U_RDO &kp LS(LG(Z))
 #define U_PST &kp LG(V)
