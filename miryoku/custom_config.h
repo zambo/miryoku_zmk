@@ -40,7 +40,7 @@
 #define U_LCM         &kp LGUI
 
 // Layer switching keys
-#define U_LG          &to U_EXTRA
+#define U_LG          &to U_GAME
 #define U_LB          &to U_BASE
 
 // Mouse keys
