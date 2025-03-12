@@ -28,9 +28,9 @@
 #define U_DR_U        &kp UP
 
 // MOD keys
-#define U_ESC         &kp ESC
+#define U_ESC         &gresc
 #define U_RET         &kp RET
-#define U_BPC         &kp BSPC
+#define U_BPC         &bspc_del
 #define U_DEL         &kp DEL
 #define U_SPC         &kp SPACE
 #define U_TAB         &kp TAB
@@ -64,20 +64,16 @@
 #define U_TFW         &kp LC(TAB)         //  Current App Tab Forward
 #define U_BFW         &kp LC(LS(TAB))     //  Current App Tab Backward
 
-// MOD MORPH
-#define U_GSC        &gresc
-#define U_BKDL
-
 #define MIRYOKU_LAYOUTMAPPING_EYELASH_CORNE( \
   K00, K01, K02, K03, K04,                           K05, K06, K07, K08, K09, \
   K10, K11, K12, K13, K14,                           K15, K16, K17, K18, K19, \
   K20, K21, K22, K23, K24,                           K25, K26, K27, K28, K29, \
   N30, N31, K32, K33, K34,                           K35, K36, K37, N38, N39 \
 ) \
-U_GSC   K00  K01  K02  K03  K04            U_DR_U          K05  K06  K07  K08  K09  U_BKDL \
-U_TAB   K10  K11  K12  K13  K14    U_DR_L  U_DR_E  U_DR_R  K15  K16  K17  K18  K19  XXX \
-U_LSH   K20  K21  K22  K23  K24  U_VMT     U_DR_D          K25  K26  K27  K28  K29  XXX \
-K32  K33  K34                            K35  K36  K37
+U_ESC   K00  K01  K02  K03  K04            U_DR_U           K05  K06  K07  K08  K09  U_BPC \
+U_TAB   K10  K11  K12  K13  K14    U_DR_L  U_DR_E  U_DR_R   K15  K16  K17  K18  K19  XXX \
+U_LSH   K20  K21  K22  K23  K24  U_VMT     U_DR_D           K25  K26  K27  K28  K29  XXX \
+K32  K33  K34                                               K35  K36  K37
 
 #define MIRYOKU_LAYERMAPPING_BASE( \
         K00, K01, K02, K03, K04,                            K05, K06, K07, K08, K09, \
@@ -85,7 +81,7 @@ K32  K33  K34                            K35  K36  K37
         K20, K21, K22, K23, K24,                            K25, K26, K27, K28, K29, \
         N30, N31, K32, K33, K34,                            K35, K36, K37, N38, N39 \
 ) \
-U_GSC   K00  K01  K02  K03  K04            U_DR_U           K05  K06  K07  K08  K09  U_BKDL      \
+U_ESC   K00  K01  K02  K03  K04            U_DR_U           K05  K06  K07  K08  K09  U_BPC      \
 U_TAB   K10  K11  K12  K13  K14    U_DR_L  U_DR_E  U_DR_R   K15  K16  K17  K18  K19  XXX        \
 U_LSH   K20  K21  K22  K23  K24  U_VMT     U_DR_D           K25  K26  K27  K28  K29  &to U_GAME \
                   K32  K33  K34                             K35  K36  K37
@@ -96,9 +92,9 @@ U_LSH   K20  K21  K22  K23  K24  U_VMT     U_DR_D           K25  K26  K27  K28  
         K20, K21, K22, K23, K24,                            K25, K26, K27, K28, K29, \
         N30, N31, K32, K33, K34,                            K35, K36, K37, N38, N39 \
 ) \
-XXX   K00  K01  K02  K03  K04            U_MS_U           K05  K06  K07  K08  K09  XXX \
-XXX   K10  K11  K12  K13  K14    U_MS_L  U_BTN1  U_MS_R   K15  K16  K17  K18  K19  XXX \
-XXX   K20  K21  K22  K23  K24  U_VMT     U_MS_D           K25  K26  K27  K28  K29  XXX \
+XXX   K00  K01  K02  K03  K04            U_MS_U             K05  K06  K07  K08  K09  XXX \
+XXX   K10  K11  K12  K13  K14    U_MS_L  U_BTN1  U_MS_R     K15  K16  K17  K18  K19  XXX \
+XXX   K20  K21  K22  K23  K24  U_VMT     U_MS_D             K25  K26  K27  K28  K29  XXX \
                   K32  K33  K34                             K35  K36  K37
 
 
@@ -108,10 +104,10 @@ XXX   K20  K21  K22  K23  K24  U_VMT     U_MS_D           K25  K26  K27  K28  K2
         K20, K21, K22, K23, K24,                            K25, K26, K27, K28, K29, \
         N30, N31, K32, K33, K34,                            K35, K36, K37, N38, N39 \
 ) \
-XXX   K00  K01  K02  K03  K04            U_DR_U           K05  K06  K07  K08  K09  U_BKDL \
-XXX   K10  K11  K12  K13  K14    U_DR_L  U_DR_E  U_DR_R   K15  K16  K17  K18  K19  XXX \
-XXX   K20  K21  K22  K23  K24  U_VMT     U_DR_D           K25  K26  K27  K28  K29  XXX \
-                  K32  K33  K34                             K35  K36  K37
+XXX   K00  K01  K02  K03  K04            U_DR_U            K05  K06  K07  K08  K09  U_BPC \
+XXX   K10  K11  K12  K13  K14    U_DR_L  U_DR_E  U_DR_R    K15  K16  K17  K18  K19  XXX \
+XXX   K20  K21  K22  K23  K24  U_VMT     U_DR_D            K25  K26  K27  K28  K29  XXX \
+                  K32  K33  K34                            K35  K36  K37
 
 
 #define MIRYOKU_LAYERMAPPING_SYM( \
@@ -120,7 +116,7 @@ XXX   K20  K21  K22  K23  K24  U_VMT     U_DR_D           K25  K26  K27  K28  K2
       K20, K21, K22, K23, K24,                              K25, K26, K27, K28, K29, \
       N30, N31, K32, K33, K34,                              K35, K36, K37, N38, N39 \
 ) \
-U_ESC   K00  K01  K02  K03  K04            U_DR_U           K05  K06  K07  K08  K09  U_BKDL \
+U_ESC   K00  K01  K02  K03  K04            U_DR_U           K05  K06  K07  K08  K09  U_BPC \
 U_TAB   K10  K11  K12  K13  K14    U_DR_L  U_DR_E  U_DR_R   K15  K16  K17  K18  K19  XXX \
 U_LSH   K20  K21  K22  K23  K24  U_VMT     U_DR_D           K25  K26  K27  K28  K29  XXX \
                   K32  K33  K34                             K35  K36  K37
