@@ -64,6 +64,10 @@
 #define U_TFW         &kp LC(TAB)         //  Current App Tab Forward
 #define U_BFW         &kp LC(LS(TAB))     //  Current App Tab Backward
 
+// MOD MORPH
+#define U_GSC         &gresc
+#define U_BKDL        &bspc_del
+
 // Updating the base to include the "Grave Escape" behavior
 // https://zmk.dev/docs/keymaps/behaviors/mod-morph#mod-morph
 #define MIRYOKU_LAYER_BASE \
