@@ -64,16 +64,24 @@
 #define U_TFW         &kp LC(TAB)         //  Current App Tab Forward
 #define U_BFW         &kp LC(LS(TAB))     //  Current App Tab Backward
 
+// Updating the base to include the "Grave Escape" behavior
+// https://zmk.dev/docs/keymaps/behaviors/mod-morph#mod-morph
+#define MIRYOKU_LAYER_BASE \
+&kp Q,             &kp W,             &kp F,                &kp P,             &kp B,             &kp J,             &kp L,             &kp U,             &kp Y,             &kp SQT,           \
+U_MT(LGUI, A),     U_MT(LALT, R),     U_MT(LCTRL, S),       U_MT(LSHFT, T),    &kp G,             &kp M,             U_MT(LSHFT, N),    U_MT(LCTRL, E),    U_MT(LALT, I),     U_MT(LGUI, O),     \
+U_LT(U_BUTTON, Z), U_MT(RALT, X),     &kp C,                &kp D,             &kp V,             &kp K,             &kp H,             &kp COMMA,         U_MT(RALT, DOT),   U_LT(U_BUTTON, SLASH),\
+U_NP,              U_NP,              U_LT(U_MEDIA, &gresc),U_LT(U_NAV, SPACE),U_LT(U_MOUSE, TAB),U_LT(U_SYM, RET),  U_LT(U_NUM, BSPC), U_LT(U_FUN, DEL),  U_NP,              U_NP
+
 #define MIRYOKU_LAYOUTMAPPING_EYELASH_CORNE( \
-        K00, K01, K02, K03, K04,                           K05, K06, K07, K08, K09, \
-        K10, K11, K12, K13, K14,                           K15, K16, K17, K18, K19, \
-        K20, K21, K22, K23, K24,                           K25, K26, K27, K28, K29, \
-        N30, N31, K32, K33, K34,                           K35, K36, K37, N38, N39 \
+  K00, K01, K02, K03, K04,                           K05, K06, K07, K08, K09, \
+  K10, K11, K12, K13, K14,                           K15, K16, K17, K18, K19, \
+  K20, K21, K22, K23, K24,                           K25, K26, K27, K28, K29, \
+  N30, N31, K32, K33, K34,                           K35, K36, K37, N38, N39 \
 ) \
 U_ESC   K00  K01  K02  K03  K04            U_DR_U          K05  K06  K07  K08  K09  XXX \
 U_TAB   K10  K11  K12  K13  K14    U_DR_L  U_DR_E  U_DR_R  K15  K16  K17  K18  K19  XXX \
 U_LSH   K20  K21  K22  K23  K24  U_VMT     U_DR_D          K25  K26  K27  K28  K29  XXX \
-                  K32  K33  K34                            K35  K36  K37
+K32  K33  K34                            K35  K36  K37
 
 #define MIRYOKU_LAYERMAPPING_BASE( \
         K00, K01, K02, K03, K04,                            K05, K06, K07, K08, K09, \
@@ -128,7 +136,6 @@ U_LSH   K20  K21  K22  K23  K24  U_VMT     U_DR_D           K25  K26  K27  K28  
 &kp A,    &kp S,    &kp D,      &kp F,      &kp G,      &kp H,    &kp J,     &kp K,       &kp L,    &kp SQT,    \
 &kp Z,    &kp X,    &kp C,      &kp V,      &kp B,      &kp N,    &kp M,     &kp COMMA,   &kp DOT,  &kp SLASH,  \
 U_NP,     U_NP,     U_LAL,      U_LCM,      U_SPC,      U_NU,     U_NU,      U_NU,        U_NP,     U_NP
-
 
 #define MIRYOKU_LAYERMAPPING_GAME( \
       K00, K01, K02, K03, K04,                              K05, K06, K07, K08, K09, \
