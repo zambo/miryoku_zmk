@@ -68,6 +68,21 @@
 		bindings = <&kp UP>, <&kp DOWN>; \
 	};
 
+	bspc_del: backspace_delete {
+		compatible = "zmk,behavior-mod-morph";
+		#binding-cells = <0>;
+		bindings = <&kp BACKSPACE>, <&kp DELETE>;
+		mods = <(MOD_LSFT|MOD_RSFT)>;
+		keep-mods = <(MOD_RSFT)>;
+	};
+
+	gresc: grave_escape {
+		compatible = "zmk,behavior-mod-morph";
+		#binding-cells = <0>;
+		bindings = <&kp ESC>, <&kp GRAVE>;
+		mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+	};
+
 	keymap {
 		compatible = "zmk,keymap";
 		#define MIRYOKU_X(LAYER, STRING, EXTRA) \
