@@ -76,7 +76,7 @@
 		keep-mods = <(MOD_RSFT)>;
 	};
 
-	gresc: grave_escape {
+	grvsc: grave_escape {
 		compatible = "zmk,behavior-mod-morph";
 		#binding-cells = <0>;
 		bindings = <&kp ESC>, <&kp GRAVE>;
