@@ -125,10 +125,10 @@ U_LSH   K20  K21  K22  K23  K24  U_VMT     U_DR_D           K25  K26  K27  K28  
 // For now, it's simply a QWERTY without home row mods, need to experiment before update
 // solasta
 #define MIRYOKU_LAYER_GAME \
-&kp Q,    &kp W,    &kp E,      &kp M,      &kp KP_ENTER,      &kp Y,    &kp U,     &kp I,       &kp O,    &kp P,      \
-&kp A,    &kp S,    &kp D,      &kp J,      &kp F5,      &kp H,    &kp J,     &kp K,       &kp L,    &kp SQT,    \
-&kp DQT,    &kp B,    &kp C,      &kp I,      &kp F9,      &kp N,    &kp M,     &kp COMMA,   &kp DOT,  &kp SLASH,  \
-U_NP,     U_NP,     U_LAL,      U_LCM,      U_SPC,      U_NU,     U_NU,      U_NU,        U_NP,     U_NP
+&kp Q,          &kp W,          &kp E,  &kp M,  &kp B,          U_NU,   U_NU,   U_NU,   U_NU,   U_NU,      \
+&kp A,          &kp S,          &kp D,  &kp J,  &kp SQT,        U_NU,   U_NU,   U_NU,   U_NU,   U_NU,    \
+&kp PG_UP,      &kp PG_DN,      &kp C,  &kp I,  &kp F5,         U_NU,   U_NU,   U_NU,   U_NU,   U_NU,  \
+U_NP,           U_NP,           U_LAL,  U_LCM,  U_SPC,          U_NU,   U_NU,   U_NU,   U_NP,   U_NP
 
 #define MIRYOKU_LAYERMAPPING_GAME( \
       K00, K01, K02, K03, K04,                              K05, K06, K07, K08, K09, \
