@@ -1,68 +1,23 @@
 // Copyright 2022 Manna Harbour
 // https://github.com/manna-harbour/miryoku
 
-#define XXX &none
+#include "custom_config/variables.h"
 
-// #define STD &studio_unlock
+// just making it obvious and decluttered
+// so I can curtomize layer by layer
+// and add / exclude layers as needed
+#include "custom_config/layout_base.h"
+#include "custom_config/layout_extra.h"
+#include "custom_config/layout_tap.h"
+#include "custom_config/layout_button.h"
+#include "custom_config/layout_nav.h"
+#include "custom_config/layout_mouse.h"
+#include "custom_config/layout_media.h"
+#include "custom_config/layout_num.h"
+#include "custom_config/layout_sym.h"
+#include "custom_config/layout_fun.h"
+#include "custom_config/layout_game.h"
 
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1250
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 100
-
-#define U_MOUSE_MOVE_EXPONENT 1
-#define U_MOUSE_MOVE_TIME 1500
-#define U_MOUSE_MOVE_DELAY 0
-#define U_MOUSE_SCROLL_EXPONENT 1
-#define U_MOUSE_SCROLL_TIME 5000
-#define U_MOUSE_SCROLL_DELAY 0
-
-// Media keys
-#define U_VUP         &kp C_VOL_UP
-#define U_VDN         &kp C_VOLUME_DOWN
-#define U_VMT         &kp C_MUTE
-
-// Direction keys
-#define U_DR_E        &kp ENTER
-#define U_DR_D        &kp DOWN
-#define U_DR_L        &kp LEFT
-#define U_DR_R        &kp RIGHT
-#define U_DR_U        &kp UP
-
-// MOD keys
-#define U_ESC         &gresc
-#define U_RET         &kp RET
-#define U_BPC         &bspc_del
-#define U_DEL         &kp DEL
-#define U_SPC         &kp SPACE
-#define U_TAB         &kp TAB
-#define U_LSH         &kp LSHFT
-#define U_LCT         &kp LCTRL
-#define U_LAL         &kp LALT
-#define U_LCM         &kp LGUI
-
-// Layer switching keys
-#define U_LG          &to U_GAME
-#define U_LB          &to U_BASE
-
-// Mouse keys
-#define U_BTN1        &mkp MB1
-#define U_BTN2        &mkp MB2
-#define U_BTN3        &mkp MB3
-#define U_MS_D        &mmv MOVE_DOWN
-#define U_MS_L        &mmv MOVE_LEFT
-#define U_MS_R        &mmv MOVE_RIGHT
-#define U_MS_U        &mmv MOVE_UP
-#define U_WH_D        &msc SCRL_DOWN
-#define U_WH_L        &msc SCRL_LEFT
-#define U_WH_R        &msc SCRL_RIGHT
-#define U_WH_U        &msc SCRL_UP
-
-// MacOS Window Management
-#define U_AFW         &kp LG(TAB)         // Tab Forward
-#define U_ABW         &kp LG(LS(TAB))     //  Tab Backward
-#define U_WFW         &kp LG(GRAVE)       //  Current App Window Forward
-#define U_WBW         &kp LG(LS(GRAVE))   //  Current App Window Backward
-#define U_TFW         &kp LC(TAB)         //  Current App Tab Forward
-#define U_BFW         &kp LC(LS(TAB))     //  Current App Tab Backward
 
 #define MIRYOKU_LAYOUTMAPPING_EYELASH_CORNE( \
   K00, K01, K02, K03, K04,                           K05, K06, K07, K08, K09, \
@@ -73,17 +28,6 @@
 U_ESC   K00  K01  K02  K03  K04            U_DR_U           K05  K06  K07  K08  K09  U_BPC \
 U_TAB   K10  K11  K12  K13  K14    U_DR_L  U_DR_E  U_DR_R   K15  K16  K17  K18  K19  XXX \
 U_LSH   K20  K21  K22  K23  K24  U_VMT     U_DR_D           K25  K26  K27  K28  K29  XXX \
-K32  K33  K34                                               K35  K36  K37
-
-#define MIRYOKU_LAYERMAPPING_BASE( \
-        K00, K01, K02, K03, K04,                            K05, K06, K07, K08, K09, \
-        K10, K11, K12, K13, K14,                            K15, K16, K17, K18, K19, \
-        K20, K21, K22, K23, K24,                            K25, K26, K27, K28, K29, \
-        N30, N31, K32, K33, K34,                            K35, K36, K37, N38, N39 \
-) \
-U_ESC   K00  K01  K02  K03  K04            U_DR_U           K05  K06  K07  K08  K09  U_BPC      \
-U_TAB   K10  K11  K12  K13  K14    U_DR_L  U_DR_E  U_DR_R   K15  K16  K17  K18  K19  XXX        \
-U_LSH   K20  K21  K22  K23  K24  U_VMT     U_DR_D           K25  K26  K27  K28  K29  &to U_GAME \
                   K32  K33  K34                             K35  K36  K37
 
 #define MIRYOKU_LAYERMAPPING_MOUSE( \
@@ -121,25 +65,12 @@ U_TAB   K10  K11  K12  K13  K14    U_DR_L  U_DR_E  U_DR_R   K15  K16  K17  K18  
 U_LSH   K20  K21  K22  K23  K24  U_VMT     U_DR_D           K25  K26  K27  K28  K29  XXX \
                   K32  K33  K34                             K35  K36  K37
 
+#define MIRYOKU_LAYER_NUMPAD \
+&kp LBKT,          &kp KP_N7,           &kp KP_N8,              &kp KP_N9,            &kp RBKT,         U_NA,              &u_to_U_BASE,      &u_to_U_EXTRA,     &u_to_U_TAP,       U_BOOT,            \
+&kp SEMI,          &kp KP_N4,           &kp KP_N5,              &kp KP_N6,            &kp KP_EQUAL,     U_NA,              &kp LSHFT,         &kp LCTRL,         &kp LALT,          &kp LGUI,          \
+&kp GRAVE,         &kp KP_N1,           &kp KP_N2,              &kp KP_N3,            &kp BSLH,         U_NA,              &u_to_U_NUM,       &u_to_U_NAV,       &kp RALT,          U_NA,              \
+U_NP,              U_NP,                &kp KP_DOT,             &kp KP_N0,            &kp KP_MINUS,     U_NA,              U_NA,              U_NA,              U_NP,              U_NP
 
-// For now, it's simply a QWERTY without home row mods, need to experiment before update
-// solasta
-#define MIRYOKU_LAYER_GAME \
-&kp Q,          &kp W,          &kp E,  &kp M,  &kp B,          U_NU,   U_NU,   U_NU,   U_NU,   U_NU,      \
-&kp A,          &kp S,          &kp D,  &kp J,  &kp SQT,        U_NU,   U_NU,   U_NU,   U_NU,   U_NU,    \
-&kp PG_UP,      &kp PG_DN,      &kp C,  &kp I,  &kp F5,         U_NU,   U_NU,   U_NU,   U_NU,   U_NU,  \
-U_NP,           U_NP,           U_LAL,  U_LCM,  U_SPC,          U_NU,   U_NU,   U_NU,   U_NP,   U_NP
-
-#define MIRYOKU_LAYERMAPPING_GAME( \
-      K00, K01, K02, K03, K04,                              K05, K06, K07, K08, K09, \
-      K10, K11, K12, K13, K14,                              K15, K16, K17, K18, K19, \
-      K20, K21, K22, K23, K24,                              K25, K26, K27, K28, K29, \
-      N30, N31, K32, K33, K34,                              K35, K36, K37, N38, N39 \
-) \
-U_ESC   K00  K01  K02  K03  K04            U_DR_U           K05  K06  K07  K08  K09  XXX \
-U_TAB   K10  K11  K12  K13  K14    U_DR_L  U_DR_E  U_DR_R   K15  K16  K17  K18  K19  XXX \
-U_LSH   K20  K21  K22  K23  K24  U_VMT     U_DR_D           K25  K26  K27  K28  K29  &to U_BASE \
-                  K32  K33  K34                             K35  K36  K37
 
 
 #define MIRYOKU_LAYER_LIST \
