@@ -20,58 +20,15 @@
 
 
 #define MIRYOKU_LAYOUTMAPPING_EYELASH_CORNE( \
-  K00, K01, K02, K03, K04,                           K05, K06, K07, K08, K09, \
-  K10, K11, K12, K13, K14,                           K15, K16, K17, K18, K19, \
-  K20, K21, K22, K23, K24,                           K25, K26, K27, K28, K29, \
-  N30, N31, K32, K33, K34,                           K35, K36, K37, N38, N39 \
+          K00, K01, K02, K03, K04,                           K05, K06, K07, K08, K09, \
+          K10, K11, K12, K13, K14,                           K15, K16, K17, K18, K19, \
+          K20, K21, K22, K23, K24,                           K25, K26, K27, K28, K29, \
+          N30, N31, K32, K33, K34,                           K35, K36, K37, N38, N39 \
 ) \
-U_ESC   K00  K01  K02  K03  K04            U_DR_U           K05  K06  K07  K08  K09  U_BPC \
-U_TAB   K10  K11  K12  K13  K14    U_DR_L  U_DR_E  U_DR_R   K15  K16  K17  K18  K19  XXX \
-U_LSH   K20  K21  K22  K23  K24  U_VMT     U_DR_D           K25  K26  K27  K28  K29  XXX \
-                  K32  K33  K34                             K35  K36  K37
-
-#define MIRYOKU_LAYERMAPPING_MOUSE( \
-        K00, K01, K02, K03, K04,                            K05, K06, K07, K08, K09, \
-        K10, K11, K12, K13, K14,                            K15, K16, K17, K18, K19, \
-        K20, K21, K22, K23, K24,                            K25, K26, K27, K28, K29, \
-        N30, N31, K32, K33, K34,                            K35, K36, K37, N38, N39 \
-) \
-XXX   K00  K01  K02  K03  K04            U_MS_U             K05  K06  K07  K08  K09  XXX \
-XXX   K10  K11  K12  K13  K14    U_MS_L  U_BTN1  U_MS_R     K15  K16  K17  K18  K19  XXX \
-XXX   K20  K21  K22  K23  K24  U_VMT     U_MS_D             K25  K26  K27  K28  K29  XXX \
-                  K32  K33  K34                             K35  K36  K37
-
-
-#define MIRYOKU_LAYERMAPPING_NAV( \
-        K00, K01, K02, K03, K04,                            K05, K06, K07, K08, K09, \
-        K10, K11, K12, K13, K14,                            K15, K16, K17, K18, K19, \
-        K20, K21, K22, K23, K24,                            K25, K26, K27, K28, K29, \
-        N30, N31, K32, K33, K34,                            K35, K36, K37, N38, N39 \
-) \
-XXX   K00  K01  K02  K03  K04            U_DR_U            K05  K06  K07  K08  K09  U_BPC \
-XXX   K10  K11  K12  K13  K14    U_DR_L  U_DR_E  U_DR_R    K15  K16  K17  K18  K19  XXX \
-XXX   K20  K21  K22  K23  K24  U_VMT     U_DR_D            K25  K26  K27  K28  K29  XXX \
-                  K32  K33  K34                            K35  K36  K37
-
-
-#define MIRYOKU_LAYERMAPPING_SYM( \
-      K00, K01, K02, K03, K04,                              K05, K06, K07, K08, K09, \
-      K10, K11, K12, K13, K14,                              K15, K16, K17, K18, K19, \
-      K20, K21, K22, K23, K24,                              K25, K26, K27, K28, K29, \
-      N30, N31, K32, K33, K34,                              K35, K36, K37, N38, N39 \
-) \
-U_ESC   K00  K01  K02  K03  K04            U_DR_U           K05  K06  K07  K08  K09  U_BPC \
-U_TAB   K10  K11  K12  K13  K14    U_DR_L  U_DR_E  U_DR_R   K15  K16  K17  K18  K19  XXX \
-U_LSH   K20  K21  K22  K23  K24  U_VMT     U_DR_D           K25  K26  K27  K28  K29  XXX \
-                  K32  K33  K34                             K35  K36  K37
-
-#define MIRYOKU_LAYER_NUMPAD \
-&kp LBKT,          &kp KP_N7,           &kp KP_N8,              &kp KP_N9,            &kp RBKT,         U_NA,              &u_to_U_BASE,      &u_to_U_EXTRA,     &u_to_U_TAP,       U_BOOT,            \
-&kp SEMI,          &kp KP_N4,           &kp KP_N5,              &kp KP_N6,            &kp KP_EQUAL,     U_NA,              &kp LSHFT,         &kp LCTRL,         &kp LALT,          &kp LGUI,          \
-&kp GRAVE,         &kp KP_N1,           &kp KP_N2,              &kp KP_N3,            &kp BSLH,         U_NA,              &u_to_U_NUM,       &u_to_U_NAV,       &kp RALT,          U_NA,              \
-U_NP,              U_NP,                &kp KP_DOT,             &kp KP_N0,            &kp KP_MINUS,     U_NA,              U_NA,              U_NA,              U_NP,              U_NP
-
-
+U_LT(U_FUN, U_ESC)  K00  K01  K02  K03  K04            U_DR_U          K05  K06  K07  K08  K09  U_LT(U_MEDIA, U_BPC) \
+U_LT(U_NUM, U_TAB)  K10  K11  K12  K13  K14    U_DR_L  U_DR_E  U_DR_R  K15  K16  K17  K18  K19  U_LT(U_NAV, XXX) \
+U_LT(U_SYM, U_LSH)  K20  K21  K22  K23  K24  U_VMT     U_DR_D          K25  K26  K27  K28  K29  U_LT(U_MOUSE, XXX) \
+                    K32  K33  K34                                      K35  K36  K37
 
 #define MIRYOKU_LAYER_LIST \
 MIRYOKU_X(BASE,   "Base",       sensor-bindings = <&volume_encoder>; ) \
