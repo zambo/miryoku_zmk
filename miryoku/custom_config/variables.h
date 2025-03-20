@@ -2,7 +2,7 @@
 #define XXX &none
 
 // Super key
-#define SUP LS(LC(LALT))
+#define SUP LG(LS(LC(LALT)))
 // #define STD &studio_unlock
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1250
