@@ -1,10 +1,10 @@
 #include "variables.h"
 
 #define MIRYOKU_LAYER_NUM \
-&kp LBKT,          &kp KP_N7,            &kp KP_N8,            &kp KP_N9,            &kp RBKT,           U_NA,              &u_to_U_BASE,      &u_to_U_EXTRA,     &u_to_U_TAP,       U_BOOT,            \
-&kp SEMI,          &kp KP_N4,            &kp KP_N5,            &kp KP_N6,            &kp KP_EQUAL,       &kp HRW_0,         &kp HRW_1,         &kp HRW_2,         &kp HRW_3,         &kp HRW_4,         \
-&kp GRAVE,         &kp KP_N1,            &kp KP_N2,            &kp KP_N3,            &kp BSLH,           U_NA,              &u_to_U_NUM,       &u_to_U_NAV,       &kp RALT,          U_NA,              \
-U_NP,              U_NP,                 &kp KP_DOT,           &kp KP_N0,            &kp KP_MINUS,       U_NA,              U_NA,              U_NA,              U_NP,              U_NP
+&kp LBKT,          &kp N7,            &kp N8,            &kp N9,            &kp RBKT,           U_NA,              &u_to_U_BASE,      &u_to_U_EXTRA,     &u_to_U_TAP,       U_BOOT,            \
+&kp SEMI,          &kp N4,            &kp N5,            &kp N6,            &kp EQUAL,          &kp HRW_0,         &kp HRW_1,         &kp HRW_2,         &kp HRW_3,         &kp HRW_4,         \
+&kp GRAVE,         &kp N1,            &kp N2,            &kp N3,            &kp BSLH,           U_NA,              &u_to_U_NUM,       &u_to_U_NAV,       &kp RALT,          U_NA,              \
+U_NP,              U_NP,              &kp DOT,           &kp N0,            &kp MINUS,          U_NA,              U_NA,              U_NA,              U_NP,              U_NP
 
 #define MIRYOKU_LAYERMAPPING_NUM( \
      K00, K01, K02, K03, K04,                            K05, K06, K07, K08, K09, \
