@@ -68,6 +68,12 @@
 		bindings = <&kp UP>, <&kp DOWN>; \
 	};
 
+  media_control: media_control
+		compatible = "zmk,behavior-sensor-rotate";
+		#sensor-binding-cells = <0>; \
+		bindings = <&kp C_RW>, <&kp C_FF>; \
+	}; 
+
 	bspc_del: backspace_delete {
 		compatible = "zmk,behavior-mod-morph";
 		#binding-cells = <0>;
