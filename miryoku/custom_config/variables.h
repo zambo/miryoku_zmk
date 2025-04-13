@@ -40,13 +40,13 @@
 #define U_LCM         &kp LGUI
 
 // Left Outer Pinky keys
-#define LOPT          &kp LG(LS(LC(LA(HASH)))) 
+#define LOPT          &kp LG(LS(LC(LA(HASH))))
 #define LOPM          &kp COLON
 #define LOPB          &kp LG(LS(LC(LA(AMPS))))
 
 // Righp Outer Pinky keys
 #define ROPT          &kp LG(LS(LC(LA(DOLLAR))))
-#define ROPM          &kp COLON
+#define ROPM          &kp LG(LS(LC(LA(EXCLAMATION))))
 #define ROPB          &kp LG(LS(LC(LA(AT))))
 
 // Layer switching keys
