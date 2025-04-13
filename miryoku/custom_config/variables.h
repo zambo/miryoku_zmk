@@ -39,6 +39,9 @@
 #define U_LAL         &kp LALT
 #define U_LCM         &kp LGUI
 
+// VIM keys
+#define U_COL         &kp COLON
+
 // Layer switching keys
 #define U_LG          &to U_GAME
 #define U_LB          &to U_BASE
