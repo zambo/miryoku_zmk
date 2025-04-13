@@ -39,8 +39,15 @@
 #define U_LAL         &kp LALT
 #define U_LCM         &kp LGUI
 
-// VIM keys
-#define U_COL         &kp COLON
+// Left Outer Pinky keys
+#define LOPT          &kp LG(LS(LC(LA(HASH)))) 
+#define LOPM          &kp COLON
+#define LOPB          &kp LG(LS(LC(LA(AMPS))))
+
+// Righp Outer Pinky keys
+#define ROPT          &kp LG(LS(LC(LA(DOLLAR))))
+#define ROPM          &kp COLON
+#define ROPB          &kp LG(LS(LC(LA(AT))))
 
 // Layer switching keys
 #define U_LG          &to U_GAME
