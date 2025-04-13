@@ -41,12 +41,12 @@
 
 // Left Outer Pinky keys
 #define LOPT          &kp LG(LS(LC(LA(HASH))))
-#define LOPM          &kp COLON
+#define LOPM          &kp LG(LS(LC(LA(EXCLAMATION))))
 #define LOPB          &kp LG(LS(LC(LA(AMPS))))
 
 // Righp Outer Pinky keys
 #define ROPT          &kp LG(LS(LC(LA(DOLLAR))))
-#define ROPM          &kp LG(LS(LC(LA(EXCLAMATION))))
+#define ROPM          &kp COLON
 #define ROPB          &kp LG(LS(LC(LA(AT))))
 
 // Layer switching keys
