@@ -42,7 +42,7 @@
 // Left Outer Pinky keys
 #define LOPT          &kp LG(LS(LC(LA(HASH))))
 #define LOPM          &kp LG(LS(LC(LA(EXCLAMATION))))
-#define LOPB          &kp LG(LS(LC(LA(AMPS))))
+#define LOPB          &kp GLOBE
 
 // Righp Outer Pinky keys
 #define ROPT          &kp LG(LS(LC(LA(DOLLAR))))
